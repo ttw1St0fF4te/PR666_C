@@ -39,14 +39,12 @@ public:
         switch (newAnswer) {
         case 1:
             std::cout << "Введите новое имя: ";
-            std::cin.ignore();
-            std::getline(std::cin, newName);
+            std::cin >> newName;
             name = newName;
             break;
         case 2:
             std::cout << "Введите новую профессию: ";
-            std::cin.ignore();
-            std::getline(std::cin, newProfession);
+            std::cin >> newProfession;
             profession = newProfession;
             break;
         case 3:
@@ -56,8 +54,7 @@ public:
             break;
         case 4:
             std::cout << "Введите новую работу: ";
-            std::cin.ignore();
-            std::getline(std::cin, newJob);
+            std::cin >> newJob;
             job = newJob;
             break;
         }
@@ -72,15 +69,13 @@ public:
         std::string name, profession, job;
         int salary;
         std::cout << "Введите имя сотрудника: ";
-        std::cin.ignore();
-        std::getline(std::cin, name);
+        std::cin >> name;
         std::cout << "Введите должность сотрудника: ";
-        std::getline(std::cin, profession);
+        std::cin >> profession;
         std::cout << "Введите ЗП сотрудника: ";
         std::cin >> salary;
         std::cout << "Введите работу для сотрудника: ";
-        std::cin.ignore();
-        std::getline(std::cin, job);
+        std::cin >> job;
 
         Person newPerson(name, profession, salary, job);
         persons.push_back(newPerson);
